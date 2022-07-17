@@ -32,3 +32,13 @@ class Solution:
 
         return [-1]
 ## hash map/ dict
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dictc = {}
+        for index,num in enumerate(nums):
+
+            if target-num in dictc:
+                return [dictc.get(target-num),index]
+            else:
+                dictc.update({num:index})
