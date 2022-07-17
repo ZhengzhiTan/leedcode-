@@ -104,3 +104,37 @@ public int[] twoSum(int[] nums, int target) {
        
         return new int[]{};
         }  
+
+//学习笔记：包装类型1
+//基本类型                               //包装类型
+// int                                  //integer
+//long                                  //Long
+//boolean                               //Boolean
+//byte                                  //Byte
+//char                                  //Character
+//flow                                  //FLow
+//double                                //Double
+//short                                 //Short
+// 包装类型 个人理解是java 内嵌的对象。
+//为啥要内嵌对象。。他们大部分的处理操作都需要用到对象. 就像arraylist 一样。他需要的对象而不是基本类型。就很操蛋。Python真是误人子弟。用多了python 很难适应。
+
+//学习笔记：包装类型2
+//按理说要是包装类型他们都是对象的话。加入value 就好了 直接Integer.valueof(值) 要拆出来就 intValue.
+//java 还加了一个 自动填装和自动拆解 就可以直接 integer i = value；
+
+//学习笔记：包装类型3
+//对象是可以提供空值NULL的
+//但是NUll 在基本类中是不存在 所以给Integer 赋值空集是可以的但是不能用intValue
+
+///学习笔记：包装类型4 
+//还有一个就是 包装类之间的自动比较 自动填装 -128-127 是可以自动填装的 但是超过这个就需要调用。 
+//学习笔记：对hashmap 的理解。他就是建了个对象嘛。方便好理解哈哈哈。
+
+
+
+
+
+
+
+
+
