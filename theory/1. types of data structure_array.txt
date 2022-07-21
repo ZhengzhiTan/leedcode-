@@ -1,0 +1,41 @@
+#https://www.geeksforgeeks.org/introduction-to-arrays/
+
+数据结构（data structure）
+- type：
+1. array
+2. linked List
+3. Stack
+4. Queue 
+5. hash
+6. Tree
+7. graph
+8. heap
+- array:
+definition: array is a collection of same type of data stored at contiguous memory locations with fix size.
+中文：一堆相同类型的数据被储存在相同大小的连续储存空间里。
+Decription: 在一定义之上除了储存数据每一个储存空集还有一个index index 独特 
+
+
+-example: |A|B|C|D|E|F|G|
+          1 2 3 4 5 6 7
+
+-core:
+1. sample type 
+2. contigunous 
+3. fix size: ???疑问 固定size 是说的 每一个格子size 一样吗。 1 也是 128 bit 1000000也是128 bit
+
+-operation
+substitution
+修改一个元素（elements） 需要O(1)
+search
+找到一个元素 也需要O(N) N: 这个array 有 N 个元素(elements)
+
+However: 
+删除(deletion): 就很困难。 以example为例， 如果我要删除C我要先删除C 然后要把C 后面的值一个一个往前挪。
+插入(insertion): 插入也是同理。
+
+##advance:
+删除和插入都是array性质决定的缺陷没有办法解决。
+但是search 的进步空间就很大。 
+如果array是连续的带顺序的，用binary之类的search可以把O(N) 变成 O(logN)
+
