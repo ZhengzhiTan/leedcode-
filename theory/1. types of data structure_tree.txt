@@ -1,1 +1,26 @@
 
+- AVL tree:
+核心逻辑：实时更新，旋转和index factor.
+index factor：用这个来评价这个node 是balance 还是imbalance. index factor = left depth - right depth. |index factor| <= 1
+旋转(rotation)：旋转分为四个类型 LL RR RL LR
+LL RR  
+     A               B
+  B    Ar -----> C       A
+C  Br                  Br    Ar
+LR
+
+     A                 C
+  B    Ar------>   B       A
+Bl   C          Bl  Cl   Cr  Ar
+   Cl Cr
+   
+实时更新
+每加入一个值都会重新确认每一个树是不是balance
+
+note:
+首先基本的树更新树的逻辑是，先把所以的值全部提出来到array然后再一个个插回去.每一次这样的运作差不多要O(N) 空间需要O(2N).
+所以基本上不能实现实时更新只能每插入100个值就重新拍一次
+
+AVL就不一样
+首先是rotation 它不需要写很多的比较。只需要判断他是不是这四种模式 然后置换一下就好了
+实时更新：它之所以可以实现实时更新的原因是它只需要例数一下插入node的路径上的node就好了。运行running time 是O(logN)
